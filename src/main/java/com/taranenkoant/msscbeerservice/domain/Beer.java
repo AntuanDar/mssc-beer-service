@@ -3,6 +3,7 @@ package com.taranenkoant.msscbeerservice.domain;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.Type;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
@@ -14,10 +15,10 @@ import java.util.UUID;
  * Create by taranenko on 21.07.2021
  * Описание:
  */
-@NoArgsConstructor
-@AllArgsConstructor
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 @Entity
 public class Beer {
@@ -25,7 +26,8 @@ public class Beer {
     @Id
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
-    @Column(length = 36, columnDefinition = "varchar", updatable = false, nullable = false)
+    @Type(type="org.hibernate.type.UUIDCharType")
+    @Column(length = 36, columnDefinition = "varchar(36)", updatable = false, nullable = false)
     private UUID id;
 
     @Version
@@ -36,16 +38,18 @@ public class Beer {
     private Timestamp createdDate;
 
     @UpdateTimestamp
-    @Column(updatable = false)
     private Timestamp lastModifiedDate;
+
     private String beerName;
     private String beerStyle;
 
     @Column(unique = true)
     private Long upc;
+
     private BigDecimal price;
 
-    private Integer migOnHand;
+    private Integer minOnHand;
     private Integer quantityToBrew;
+
 
 }
