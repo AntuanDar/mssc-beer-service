@@ -1,0 +1,17 @@
+com\taranenkoant\msscbeerservice\web\model\BeerDto.class
+com\taranenkoant\msscbeerservice\web\mappers\BeerMapper.class
+com\taranenkoant\msscbeerservice\web\controller\MvcExceptionHandler.class
+com\taranenkoant\msscbeerservice\web\model\BeerPagedList.class
+com\taranenkoant\msscbeerservice\repositories\BeerRepository.class
+com\taranenkoant\msscbeerservice\web\controller\BeerController.class
+com\taranenkoant\msscbeerservice\MsscBeerServiceApplication.class
+com\taranenkoant\msscbeerservice\services\BeerServiceImpl.class
+com\taranenkoant\msscbeerservice\bootstrap\BeerLoader.class
+com\taranenkoant\msscbeerservice\services\BeerService.class
+com\taranenkoant\msscbeerservice\web\mappers\DateMapper.class
+com\taranenkoant\msscbeerservice\domain\Beer$BeerBuilder.class
+com\taranenkoant\msscbeerservice\web\controller\NotFoundException.class
+com\taranenkoant\msscbeerservice\web\mappers\BeerMapperImpl.class
+com\taranenkoant\msscbeerservice\web\model\BeerStyleEnum.class
+com\taranenkoant\msscbeerservice\domain\Beer.class
+com\taranenkoant\msscbeerservice\web\model\BeerDto$BeerDtoBuilder.class

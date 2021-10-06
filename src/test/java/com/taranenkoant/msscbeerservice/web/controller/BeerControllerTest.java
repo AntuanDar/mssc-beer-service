@@ -1,6 +1,7 @@
 package com.taranenkoant.msscbeerservice.web.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.taranenkoant.msscbeerservice.bootstrap.BeerLoader;
 import com.taranenkoant.msscbeerservice.domain.Beer;
 import com.taranenkoant.msscbeerservice.repositories.BeerRepository;
 import com.taranenkoant.msscbeerservice.web.model.BeerDto;
@@ -115,7 +116,7 @@ class BeerControllerTest {
                 .beerName("Nice Ale")
                 .beerStyleEnum(BeerStyleEnum.ALE)
                 .price(new BigDecimal("9.99"))
-                .upc(123123123123L)
+                .upc(BeerLoader.BEER_1_UPC)
                 .build();
 
     }
